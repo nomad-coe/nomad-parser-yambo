@@ -20,7 +20,7 @@ import os
 import numpy as np
 import logging
 from datetime import datetime
-from netCDF4 import Dataset  # pylint: disable=import-error
+from netCDF4 import Dataset  # pylint: disable=no-name-in-module
 from ase.data import chemical_symbols
 
 from nomad.parsing import FairdiParser
@@ -103,7 +103,7 @@ class MainfileParser(TextParser):
             Quantity(
                 'x_yambo_electronic_density',
                 rf'El\. density.+?: +(.+?)(?:\[|\n)',
-                str_operation=lambda x: x.strip().split()[-1], dtype=np.float64, unit=1 / ureg.cm**3
+                str_operation=lambda x: x.strip().split()[-1], dtype=np.float64
             ),
             Quantity(
                 'states_summary',

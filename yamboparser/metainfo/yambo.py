@@ -319,7 +319,7 @@ class Calculation(simulation.calculation.Calculation):
     x_yambo_electronic_density = Quantity(
         type=np.dtype(np.float64),
         shape=[],
-        unit='1/cm**3',
+        # unit='1/cm**3',
         description='''
         ''')
 

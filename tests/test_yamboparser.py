@@ -50,7 +50,7 @@ def test_0(parser):
     calc = run.calculation[0]
     assert calc.energy.fermi.magnitude == approx(8.18834506e-19)
     assert calc.energy.lowest_unoccupied.magnitude == approx(6.21331789e-19)
-    assert calc.x_yambo_electronic_density.magnitude == approx(0.46037E+24)
+    assert calc.x_yambo_electronic_density == approx(0.46037E+24)
     assert not calc.x_yambo_finite_temperature_mode
     assert calc.x_yambo_filled_bands[1] == 8
     assert calc.x_yambo_direct_gap.magnitude == approx(6.87318075e-19)
