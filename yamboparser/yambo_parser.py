@@ -414,7 +414,7 @@ class NetCDFParser(FileParser):
             try:
                 self._file_handler = Dataset(self.mainfile)
             except Exception:
-                self.logger.error('Error loading file.')
+                self.logger.warn('Error loading file.')
 
         return self._file_handler
 
@@ -447,7 +447,7 @@ class YamboParser(FairdiParser):
     def __init__(self):
         super().__init__(
             name='parsers/yambo', code_name='YAMBO', code_homepage='https://yambo-code.org/',
-            mainfile_contents_re=(r'Version.+\s+.+Build.+\s+http://www\.yambo-code\.org'))
+            mainfile_contents_re=(r'Build.+\s+http://www\.yambo-code\.org'))
         self.mainfile_parser = MainfileParser()
         self.input_parser = InputParser()
         self.netcdf_parser = NetCDFParser()
