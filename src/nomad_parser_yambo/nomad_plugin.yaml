@@ -1,0 +1,8 @@
+plugin_type: parser
+name: parsers/yambo
+description: |
+  This plugin is used to parsed YAMBO files into the NOMAD schema.
+mainfile_contents_re: Build.+\s+http://www\.yambo-code\.org
+python_package: nomad_parser_yambo
+parser_class_name: nomad_parser_yambo.YamboParser
+code_name: YAMBO
