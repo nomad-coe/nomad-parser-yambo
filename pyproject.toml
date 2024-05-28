@@ -40,6 +40,7 @@ dev = [
     "structlog==22.3.0",
     'mypy==1.0.1',
     "lxml_html_clean>=0.1.0",
+    "netCDF4==1.6.5",
 ]
 
 [tool.ruff]

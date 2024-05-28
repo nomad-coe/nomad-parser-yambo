@@ -21,7 +21,7 @@ import numpy as np
 import logging
 from datetime import datetime
 
-# from netCDF4 import Dataset  # pylint: disable=no-name-in-module
+from netCDF4 import Dataset
 from ase.data import chemical_symbols
 
 from nomad.parsing.file_parser import TextParser, Quantity, FileParser
